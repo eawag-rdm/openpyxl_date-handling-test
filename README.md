@@ -27,10 +27,10 @@ Problems in the past have revolved around times and dates that get somewhere exp
 
 Results in `testdates_<pyxl_version>_round.xlsx`
 
-![**Roundtrip V.2.4.5**: re-written date sports Jan 0th, has funny formatting and midnight doesn't work.](./round_2.4.5.png)
+![**Roundtrip V.2.4.5**: re-written date sports Jan 0th, has funny formatting and midnight doesn't work.](./round_2.4.5.png)**Roundtrip V.2.4.5**: re-written date sports Jan 0th, has funny formatting and midnight doesn't work.
 
 
-![**Roundtrip V.2.5.0**: looks OK!](./round_2.5.0.png)
+![**Roundtrip V.2.5.0**: looks OK!](./round_2.5.0.png) **Roundtrip V.2.5.0**: looks OK!
 
  
 ### Excel Interrupt
@@ -41,10 +41,10 @@ Results in `testdates_<pyxl_version>_round.xlsx`
 
 Results in `testdates_<pyxl_version>_wr_saved_rew.xlsx`
 
-![**Excel Interrupt V.2.4.5**: Same botched results as Roundtrip above](./xl_interrupt_2.4.5.png)
+![**Excel Interrupt V.2.4.5**: Same botched results as Roundtrip above](./xl_interrupt_2.4.5.png)**Excel Interrupt V.2.4.5**: Same botched results as Roundtrip above
 
 
-![**Excel Interrupt V.2.5.0**: Same botched results as above, except that now also the 1900-01-01 is changed to Jan. 0th and midnight is changed to "invalid" in the columns that were initially written correctly ](./xl_interrupt_2.5.0.png)
+![**Excel Interrupt V.2.5.0**: Same botched results as above, except that now also the 1900-01-01 is changed to Jan. 0th and midnight is changed to "invalid" in the columns that were initially written correctly ](./xl_interrupt_2.5.0.png)**Excel Interrupt V.2.5.0**: Same botched results as above, except that now also the 1900-01-01 is changed to Jan. 0th and midnight is changed to "invalid" in the columns that were initially written correctly.
 
 
 
