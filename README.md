@@ -17,38 +17,26 @@ Problems in the past have revolved around times and dates that get somewhere exp
 + MS Excel 2010 on Windows 7 Enterprise   
 Note that differing versions of anything above, let alone using Excel for Mac, will likely change all outcomes.
 + I could not be bothered to play with different language setting of OS and Office. It is both "Swiss German", I believe.
-+ openpyxl 2.4.5 and 2.5.0 (\<pyxl_version\> = 2.4.5 or 2.5.0)
++ openpyxl 2.5.0
+
+## Usage
+
+Run `./datetest.py` and follow instructions.
 
 ## Tests
 
-### Roundtrip
+### 1. Roundtrip
 
-1. `datetest.py write` writes testdates into `testdates_<pyxl_version>_wr.xlsx`
-2. `datetest.py read` reads the previously generated xlsx file and writes the read values back, but into new columns.
+`openpyxl is used to write a), a set of dates, b), a set of times and c), a set of datetimes to an xlsx file. Then `openpyxl is used to read these data again from the file and write them back, into additional columns. Note: The columns starting with "string_" are string representations of the respective dates to serve as a reference as what was the true value should be. This is done both with parameter `iso_dates=True` for the initial creation of the workbook, and without. The resulting files are `testdates.roundtrip_isodates.xlsx` and `testdates_roundtrip.xlsx`, respectively.
 
-Results in `testdates_<pyxl_version>_round.xlsx`
+![**Roundtrip with `iso_dates=True`**: looks OK!](./img/roundtrip_isodates.png)
 
-![**Roundtrip V.2.4.5**: re-written date sports Jan 0th, has funny formatting and midnight doesn't work.](./round_2.4.5.png)**Roundtrip V.2.4.5**: re-written date sports Jan 0th, has funny formatting and midnight doesn't work.
+![**Roundtrip without `iso_dates`**: re-written date sports Jan 0th, has funny formatting and midnight doesn't work.Note that `1900-01-01`has changed to `1900-01-00`even in the column `written_date`, which had correct value when the file was written the first time.](./img/roundtrip.png)
 
+### 2. Excel Interrupt
 
-![**Roundtrip V.2.5.0**: looks OK!](./round_2.5.0.png) **Roundtrip V.2.5.0**: looks OK!
+Just like "**Roundtrip**" except that after the initial file is written, the user has opened it with Excel and saved it under a different name. Without applying any changes! The resulting files are `testdates_isodates_xlinterrupt.xlsx` and `testdates_xlinterrupt.xlsx`, respectively.
 
- 
-### Excel Interrupt
+![**Excel Interrupt with `iso_dates=True`**: Same botched results as above.](./img/xlinterrupt_isodates.png)
 
-1. `datetest.py write` writes testdates into `testdates_<pyxl_version>_wr.xlsx`
-2. Open `testdates_<pyxl_version>_wr.xlsx` with Excel and immediatel save it as `testdates_<pyxl_version>_wr_saved.xlsx`$
-3. `datetest.py read` reads the previously generated xlsx file and writes the read values back, but into new columns.
-
-Results in `testdates_<pyxl_version>_wr_saved_rew.xlsx`
-
-![**Excel Interrupt V.2.4.5**: Same botched results as Roundtrip above](./xl_interrupt_2.4.5.png)**Excel Interrupt V.2.4.5**: Same botched results as Roundtrip above
-
-
-![**Excel Interrupt V.2.5.0**: Same botched results as above, except that now also the 1900-01-01 is changed to Jan. 0th and midnight is changed to "invalid" in the columns that were initially written correctly ](./xl_interrupt_2.5.0.png)**Excel Interrupt V.2.5.0**: Same botched results as above, except that now also the 1900-01-01 is changed to Jan. 0th and midnight is changed to "invalid" in the columns that were initially written correctly.
-
-
-
-
-
-
+![**Excel Interrupt without `iso_dates`**: Same botched results as above](./img/xlinterrupt.png)
