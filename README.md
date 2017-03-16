@@ -16,7 +16,7 @@ Problems in the past have revolved around times and dates that get somewhere exp
 
 + MS Excel 2010 on Windows 7 Enterprise   
 Note that differing versions of anything above, let alone using Excel for Mac, will likely change all outcomes.
-+ I could not be bothered to play with differing language setting of OS and Office. It is both "Swiss German", I believe.
++ I could not be bothered to play with different language setting of OS and Office. It is both "Swiss German", I believe.
 + openpyxl 2.4.5 and 2.5.0 (\<pyxl_version\> = 2.4.5 or 2.5.0)
 
 ## Tests
