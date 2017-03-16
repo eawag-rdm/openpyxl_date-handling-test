@@ -6,7 +6,7 @@ MS Excel dates are a horrible, buggy and unpredictable mess, and
 nobody who records time or date in any capacity should use
 it. However, word has not gotten around yet.
 
-The developers of the [`openpyxl` module](https://bitbucket.org/openpyxl/openpyxl) recently introduced an improved handling of dates. A couple of test however show that this is no silver bullet. Based on the results below maybe the best advice is to not under any circumstances use a numerical data-type, including "Date" types in Excel and rather express time related stuff as strings. You can't calculate with dates then, you say? If you want to calculate anything you should not have used Excel in the first place! [:grumpy:].
+The developers of the great [`openpyxl` module](https://bitbucket.org/openpyxl/openpyxl) recently introduced an improved handling of dates. A couple of test however show that this is no silver bullet. Based on the results below maybe the best advice is to not under any circumstances use a numerical data-type, including "Date" types in Excel and rather express time related stuff as strings. You can't calculate with dates then, you say? If you want to calculate anything you should not have used Excel in the first place! [:grumpy:].
 
 ## Testdata
 
